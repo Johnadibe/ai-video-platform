@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Test Database
+  postgres:
+    image: postgres:16-alpine
+    container_name: ai-video-platform-db-test
+    restart: unless-stopped
+    ports:
+      - '5433:5432'
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres_test
+      POSTGRES_DB: ai_video_platform_test
+    volumes:
+      - postgres_data_test:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U postgres']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Redis Test Instance
+  redis:
+    image: redis:7-alpine
+    container_name: ai-video-platform-redis-test
+    restart: unless-stopped
+    ports:
+      - '6380:6379'
+    volumes:
+      - redis_data_test:/data
+    healthcheck:
+      test: ['CMD', 'redis-cli', 'ping']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data_test:
+  redis_data_test:
+
+networks:
+  default:
+    name: ai-video-platform-network-test
+

@@ -1,0 +1,12 @@
+# *
+User-agent: *
+Allow: /
+
+# Disallow admin and API routes
+Disallow: /api/
+Disallow: /dashboard/
+Disallow: /admin/
+
+# Sitemap
+Sitemap: https://aivideoplatform.com/sitemap.xml
+
