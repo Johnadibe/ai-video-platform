@@ -440,8 +440,8 @@ export default function FeaturesPage() {
                     <h3 className="font-semibold">Without AI</h3>
                   </div>
                   <p className="text-sm text-muted-foreground italic">
-                    "Our product is really good. It has many features and it's affordable.
-                    You should buy it because it will help your business..."
+                   &quot;Our product is really good. It has many features and it&apos;s affordable.
+You should buy it because it will help your business...&quot;
                   </p>
                   <div className="mt-4 flex gap-2">
                     <Badge variant="outline" className="text-error">Generic</Badge>
@@ -457,9 +457,9 @@ export default function FeaturesPage() {
                     <h3 className="font-semibold">With AI</h3>
                   </div>
                   <p className="text-sm text-muted-foreground italic">
-                    "Struggling with content creation? What if you could produce
-                    professional videos in just 5 minutes? Our AI does the heavy
-                    lifting—scripts, visuals, voiceovers. Start your 14-day free trial!"
+                    &quot;Struggling with content creation? What if you could produce
+professional videos in just 5 minutes? Our AI does the heavy
+lifting—scripts, visuals, voiceovers. Start your 14-day free trial!&quot;
                   </p>
                   <div className="mt-4 flex gap-2">
                     <Badge className="bg-success">Hook</Badge>
@@ -787,7 +787,7 @@ export default function FeaturesPage() {
                 See How We Compare to Competitors
               </h2>
               <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-                We're faster, more affordable, and packed with more features than any
+                We&apos;re faster, more affordable, and packed with more features than any
                 other AI video platform.
               </p>
               <Link href="/comparison">

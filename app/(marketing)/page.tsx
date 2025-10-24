@@ -278,7 +278,7 @@ export default function HomePage() {
           <div className="mt-12 text-center">
             <Link href="/signup">
               <Button size="lg" className="gap-2">
-                Try It Now - It's Free
+                Try It Now - It&apos;s Free
                 <ArrowRight className="h-4 w-4" />
               </Button>
             </Link>
