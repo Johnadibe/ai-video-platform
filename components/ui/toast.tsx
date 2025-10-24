@@ -48,12 +48,14 @@ const Toast = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof ToastPrimitives.Root> &
     VariantProps<typeof toastVariants>
 >(({ className, variant, ...props }, ref) => {
-  const Icon = {
-    success: CheckCircle2,
-    error: XCircle,
-    warning: AlertCircle,
-    info: Info,
-  }[variant || 'default'];
+const iconMap = {
+  success: CheckCircle2,
+  error: XCircle,
+  warning: AlertCircle,
+  info: Info,
+} as const;
+
+const Icon = variant && variant !== 'default' ? iconMap[variant as keyof typeof iconMap] : null;
 
   return (
     <ToastPrimitives.Root
